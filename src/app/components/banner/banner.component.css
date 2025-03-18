@@ -1,0 +1,1451 @@
+.bannerimg-wrapper {
+  position: relative;
+  width: 105%; /* Ensure it takes full width */
+  margin-left: -3%; /* ✅ Shift left to center it properly */
+  overflow: hidden;
+}
+
+.bannerimg {
+  width: 100%;
+  height: 420px;
+  background-image: url('/assets/images/Banner.png'); 
+  background-size:100% auto; /* ✅ Stretch to fill width without losing aspect ratio */
+  background-position: contain;
+  background-repeat: no-repeat;
+  transform: translate(20px, 30px); /* ✅ Move right by 20px and down by 30px */
+}
+
+/* Responsive styles for tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .bannerimg-wrapper {
+    width: 100%; /* Reset width to 100% */
+    margin-left: 0; /* Remove negative margin */
+  }
+
+  .bannerimg {
+    height: 320px; /* Reduce height for tablets */
+    background-size: cover; /* Ensure the image covers the entire area */
+    transform: translate(10px, 20px); /* Adjust transform for smaller screens */
+  }
+}
+
+/* Responsive styles for mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .bannerimg {
+    height: 250px; /* Further reduce height for mobile */
+    background-size: cover; /* Ensure the image covers the entire area */
+    transform: translate(5px, 10px); /* Adjust transform for mobile */
+  }
+}
+
+/* Responsive styles for very small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .bannerimg {
+    height: 180px; /* Small height for very small devices */
+    background-size: cover; /* Ensure the image covers the entire area */
+    transform: none; /* Remove transform for very small screens */
+  }
+}
+
+
+
+/*grid*/
+/* Wrapper for Hisense section */
+.hisense-wrapper {
+  position:absolute; /* ✅ Use absolute positioning for easy placement */
+  top: 400px; /* ✅ Adjust to move up/down */
+  left: 50px; /* ✅ Adjust to move left/right */
+  display: flex;
+  gap: 32px;
+  height: 580px;
+  width: 1309px;
+  overflow: visible;
+  
+  
+}
+
+/* Container */
+.hisense-container {
+  display: flex;
+  gap: 16px;
+  width: 739px;
+  height: 405px;
+}
+
+/* Big Card */
+.hisense-card-big {
+  width: 320px;
+  height: 428px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  
+
+}
+
+.hisense-card-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  
+}
+
+.hisense-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.hisense-overlay h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hisense-overlay button {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hisense-card-big:hover .hisense-overlay {
+  opacity: 1;
+}
+
+.hisense-overlay button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Small Cards (Row) */
+.hisense-card-small-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hisense-card-small {
+  width: 319px;
+  height: 199px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.hisense-card-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Row (Two Smaller Cards) */
+.hisense-card-bottom-container {
+  display: flex;
+  gap: 16px;
+}
+
+.hisense-card-bottom {
+  width: 150px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.hisense-card-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hisense-card-small:hover .hisense-overlay,
+.hisense-card-bottom:hover .hisense-overlay {
+  opacity: 1;
+}
+
+
+/* Container */
+/* Wrapper for Microsoft section */
+.microsoft-wrapper {
+  position: absolute; /* ✅ Use absolute positioning for easy placement */
+  top: 437px; /* ✅ Adjust to move up/down */
+  left: 100px; /* ✅ Adjust to move left/right */
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the row order */
+  align-items: center;
+  gap: 32px;
+  width: 1309px;
+  height: 350px;
+  overflow: visible;
+}
+
+/* Container */
+.microsoft-container {
+  display: flex;
+  gap: 16px;
+  width: 639px;
+  height: 405px;
+}
+
+/* Right Side (Big Card) */
+.microsoft-card-big {
+  width: 304px;
+  height: 415px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.microsoft-card-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.microsoft-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.microsoft-overlay h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.microsoft-overlay button {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.microsoft-card-big:hover .microsoft-overlay {
+  opacity: 1;
+}
+
+.microsoft-overlay button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Left Side (Two Smaller Cards) */
+.microsoft-card-small-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.microsoft-card-small {
+  width: 319px;
+  height: 199px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.microsoft-card-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Row (Two Smaller Cards) */
+.microsoft-card-bottom-container {
+  display: flex;
+  gap: 16px;
+}
+
+.microsoft-card-bottom {
+  width: 150px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.microsoft-card-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.microsoft-card-small:hover .microsoft-overlay,
+.microsoft-card-bottom:hover .microsoft-overlay {
+  opacity: 1;
+}
+
+/* Wrapper for RunMus section */
+.runmus-wrapper {
+  position: absolute; /* ✅ Use absolute positioning for easy placement */
+  top: 840px; /* ✅ Adjust to move up/down */
+  left: 50px; /* ✅ Adjust to move left/right */
+  display: flex;
+  gap: 32px;
+  height: 580px;
+  width: 1309px;
+  overflow: visible;
+}
+
+/* Container */
+.runmus-container {
+  display: flex;
+  gap: 16px;
+  width: 739px;
+  height: 405px;
+}
+
+/* Big Card */
+.runmus-card-big {
+  width: 320px;
+  height: 428px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+.runmus-card-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.runmus-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.runmus-overlay h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.runmus-overlay button {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.runmus-card-big:hover .runmus-overlay {
+  opacity: 1;
+}
+
+.runmus-overlay button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Small Cards (Row) */
+.runmus-card-small-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.runmus-card-small {
+  width: 319px;
+  height: 199px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.runmus-card-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Row (Two Smaller Cards) */
+.runmus-card-bottom-container {
+  display: flex;
+  gap: 16px;
+}
+
+.runmus-card-bottom {
+  width: 150px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.runmus-card-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.runmus-card-small:hover .runmus-overlay,
+.runmus-card-bottom:hover .runmus-overlay {
+  opacity: 1;
+}
+
+
+/* Wrapper for Lenovo section */
+.lenovo-wrapper {
+  position: absolute; /* ✅ Use absolute positioning for easy placement */
+  top: 877px; /* ✅ Adjust to move up/down */
+  left: 100px; /* ✅ Adjust to move left/right */
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the row order */
+  align-items: center;
+  gap: 32px;
+  width: 1309px;
+  height: 350px;
+  overflow: visible;
+}
+
+/* Container */
+.lenovo-container {
+  display: flex;
+  gap: 16px;
+  width: 639px;
+  height: 405px;
+}
+
+/* Right Side (Big Card) */
+.lenovo-card-big {
+  width: 304px;
+  height: 415px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.lenovo-card-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lenovo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.lenovo-overlay h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.lenovo-overlay button {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.lenovo-card-big:hover .lenovo-overlay {
+  opacity: 1;
+}
+
+.lenovo-overlay button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Left Side (Two Smaller Cards) */
+.lenovo-card-small-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lenovo-card-small {
+  width: 319px;
+  height: 199px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.lenovo-card-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Row (Two Smaller Cards) */
+.lenovo-card-bottom-container {
+  display: flex;
+  gap: 16px;
+}
+
+.lenovo-card-bottom {
+  width: 150px;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.lenovo-card-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lenovo-card-small:hover .lenovo-overlay,
+.lenovo-card-bottom:hover .lenovo-overlay {
+  opacity: 1;
+}
+
+
+/*sub title*/
+/* Wrapper */
+.subtitle-wrapper {
+  width: 1338px;
+  top: 1290px;
+  left:90px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: absolute;
+}
+
+/* Left Section */
+.subtitle-left {
+  width: 300px;
+  height: 75px;
+  background: #012B49;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 8px 0 0 8px;
+  margin-left: -50px;
+}
+
+.subtitle-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* Center Text */
+.subtitle-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #001018;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Right Button */
+.subtitle-right {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle-btn {
+  width: 215px;
+  height: 52px;
+  background: #012B49;
+  color: #FFFFFF;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subtitle-btn:hover {
+  background: #01395F;
+}
+/*trending product*/
+/* Wrapper */
+.trending-products-wrapper {
+  width: 1400px;
+  overflow: hidden;
+  left: 45px;
+  padding: 10px;
+  top: 1380px;
+  position: absolute;
+}
+
+/* Container with Scroll Effect */
+.trending-products-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+/* Product Card */
+.product-card {
+  width: 280px;
+  height: 430px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+.trending-products-wrapper .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* ✅ Increase shadow intensity */
+}
+
+.trending-products-wrapper .product-card:hover .product-image {
+  transform: scale(1.05); /* ✅ Add zoom effect on image */
+  transition: transform 0.3s ease;
+}
+/* Product Image */
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Product Details */
+.product-details {
+  padding: 12px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #001018;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Price Section */
+.product-price {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.new-price {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.discount {
+  color: #007bff;
+  margin-left: 5px;
+}
+
+/* Shipping */
+.product-shipping {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.shop-seller {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Action Buttons */
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.view-btn,
+.cart-btn,
+.wishlist-btn {
+  background-color: #012b49;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-btn:hover,
+.cart-btn:hover,
+.wishlist-btn:hover {
+  background-color: #01395f;
+}
+
+.cart-btn i,
+.wishlist-btn i {
+  font-size: 18px;
+}
+
+
+/*sub title 2*/
+/* Wrapper */
+.subtitle2-wrapper {
+  width: 1338px;
+  top: 1850px;
+  left:90px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: absolute;
+}
+
+/* Left Section */
+.subtitle2-left {
+  width: 300px;
+  height: 75px;
+  background: #012B49;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 8px 0 0 8px;
+  margin-left: -50px;
+}
+
+.subtitle2-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* Center Text */
+.subtitle2-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #001018;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Right Button */
+.subtitle2-right {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle2-btn {
+  width: 215px;
+  height: 52px;
+  background: #012B49;
+  color: #FFFFFF;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subtitle2-btn:hover {
+  background: #01395F;
+}
+
+
+/* Wrapper   top brands section:*/
+.top-brand-wrapper {
+  top: 1925px;
+  width: 1400px;
+  overflow: hidden;
+  left: 45px;
+  padding: 20px;
+  position: absolute;
+}
+/* Container */
+.top-brand-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  transition: transform 0.2s ease;
+}
+
+/* Brand Card */
+.brand-card {
+  width: 300px;
+  height: 370px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Image */
+.brand-image {
+  width: 70%;
+  top: 70px;
+  
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-image {
+  transform: scale(1.05);
+  
+}
+
+/* Brand Details */
+.brand-details {
+  padding: 35px;
+  text-align: center;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #001018;
+}
+
+.brand-discount {
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Footer Section for View More and Count */
+.brand-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* View More Link */
+.view-more {
+  color: #444546;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}
+
+/* Count Badge */
+.count-badge {
+  background-color: #e0e0e0;
+  color: #000;
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/*sub title 3*/
+/* Wrapper */
+.subtitle3-wrapper {
+  width: 1338px;
+  top:2340px;
+  left:90px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: absolute;
+}
+
+/* Left Section */
+.subtitle3-left {
+  width: 300px;
+  height: 75px;
+  background: #012B49;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 8px 0 0 8px;
+  margin-left: -50px;
+}
+
+.subtitle3-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* Center Text */
+.subtitle3-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #001018;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Right Button */
+.subtitle3-right {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle3-btn {
+  width: 215px;
+  height: 52px;
+  background: #012B49;
+  color: #FFFFFF;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subtitle3-btn:hover {
+  background: #01395F;
+}
+/*best product*/
+/* Best Products Wrapper */
+.best-products-wrapper {
+  width: 1400px;
+  top: 2440px;
+  overflow: hidden;
+  left: 45px;
+  padding: 0px;
+  position: absolute;
+}
+
+/* Container with Scroll Effect */
+.best-products-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+/* Product Card */
+.best-product-card {
+  width: 280px;
+  height: 430px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.best-products-wrapper .best-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* ✅ Increase shadow intensity */
+}
+
+/* ✅ Fixed Hover Effect on Image */
+.best-products-wrapper .best-product-card:hover .best-product-image {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Product Image */
+.best-product-image {
+  width: 60%;
+  height: 150px;
+  object-fit: cover;
+  margin-left:25px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* Product Details */
+.best-product-details {
+  padding: 12px;
+}
+
+.best-product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #001018;
+}
+
+.best-product-desc {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Price Section */
+.best-product-price {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+.best-old-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.best-new-price {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.best-discount {
+  color: #007bff;
+  margin-left: 5px;
+}
+
+/* ⭐ Rating Section */
+.best-product-rating {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.best-rating {
+  background-color: #1ec756;
+  color: #ffffff;
+  padding: 3px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.best-rating i {
+  font-size: 14px;
+}
+
+.best-review-count {
+  font-size: 14px;
+  color: #666;
+  margin-left: 6px;
+}
+
+/* Shipping */
+.best-product-shipping {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.best-shop-seller {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Action Buttons */
+.best-product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.best-view-btn,
+.best-cart-btn,
+.best-wishlist-btn {
+  background-color: #012b49;
+  color: #ffffff;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.best-view-btn:hover,
+.best-cart-btn:hover,
+.best-wishlist-btn:hover {
+  background-color: #01395f;
+}
+
+.best-cart-btn i,
+.best-wishlist-btn i {
+  font-size: 18px;
+}
+
+/* View More + Count on Right Side */
+.best-view-more {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.best-view-more span {
+  background-color: #e0e0e0;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+
+
+
+/*sub title 4*/
+/* Wrapper */
+.subtitle4-wrapper {
+  width: 1338px;
+  top:2930px;
+  left:90px;
+  height: 75px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: absolute;
+}
+
+/* Left Section */
+.subtitle4-left {
+  width: 300px;
+  height: 75px;
+  background: #012B49;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 8px 0 0 8px;
+  margin-left: -50px;
+}
+
+.subtitle4-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* Center Text */
+.subtitle4-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #001018;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Right Button */
+.subtitle4-right {
+  display: flex;
+  align-items: center;
+}
+
+.subtitle4-btn {
+  width: 215px;
+  height: 52px;
+  background: #012B49;
+  color: #FFFFFF;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subtitle4-btn:hover {
+  background: #01395F;
+}
+
+
+
+/*browsing history*/
+/* Browsing History Wrapper */
+.browsing-history-wrapper {
+  width: 1400px;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  top: 3030px;
+  left: 45px;
+  position: absolute;
+}
+
+/* Container with Scroll Effect */
+.browsing-history-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.2s ease;
+}
+
+/* Product Card */
+.browsing-card {
+  width: 280px;
+  height: 440px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.browsing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.browsing-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.browsing-card:hover .browsing-image {
+  transform: scale(1.05);
+}
+
+/* Product Details */
+.browsing-details {
+  padding: 12px;
+}
+
+.browsing-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #001018;
+}
+
+.browsing-desc {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Rating */
+.browsing-rating {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.rating-badge {
+  background-color: #1ec756;
+  color: #ffffff;
+  padding: 3px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.rating-badge i {
+  margin-right: 4px;
+}
+
+/* Price Section */
+.browsing-price {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.new-price {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.discount {
+  color: #007bff;
+  margin-left: 5px;
+}
+
+/* Shipping Info */
+.browsing-shipping {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.shop-seller {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Action Buttons */
+.browsing-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.view-btn,
+.cart-btn,
+.wishlist-btn {
+  background-color: #012b49;
+  color: #ffffff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-btn:hover,
+.cart-btn:hover,
+.wishlist-btn:hover {
+  background-color: #01395f;
+}
+
+.cart-btn i,
+.wishlist-btn i {
+  font-size: 18px;
+}
+
+/* View More */
+.view-more {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.view-more span {
+  background-color: #e0e0e0;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}

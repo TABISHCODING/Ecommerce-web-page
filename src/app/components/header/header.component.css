@@ -1,0 +1,342 @@
+/* ✅ Wrap Header and Frame in a Separate Container */
+ /* :host {
+    position: static; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #AFEAFF 0%, #e51616 100%);
+    z-index: -1; /* Place it behind other content 
+   
+  }*/
+.header-wrapper {
+  position:fixed ; /* Fix the header and frame at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above other content */
+  background: #ffffff; /* Add background color */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Add shadow for better visibility */
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 82px; /* Adjust height as needed */
+}
+
+/* Menu */
+.menu {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-icon {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background-color: #1c1b1f;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background-color: #1c1b1f;
+}
+
+.menu-icon::before {
+  top: -7px;
+}
+
+.menu-icon::after {
+  top: 6px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #012b49;
+  border-radius: 8px;
+  width: 850px;
+  height: 45px;
+  margin-left: 65px;
+  flex-wrap: nowrap; /* Prevent items from breaking into new line */
+}
+
+/* Dropdown */
+.dropdown .dropdown-toggle {
+  background: #012b49;
+  color: #e3f8ff;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove the default dropdown arrow */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-menu {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001; /* Ensure dropdown is above the header */
+}
+
+.dropdown-item {
+  color: #000;
+  padding: 10px;
+}
+
+.dropdown-item:hover {
+  background: yellow;
+}
+
+/* Search Input */
+.search-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: #e3f8ff;
+  font-size: 20px;
+  outline: none;
+  color: inherit;
+}
+
+/* Search Actions */
+.search-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* QR Code Icon */
+.qr-icon {
+  background-color: #012b49;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-icon i {
+  font-size: 15px;
+  color: #e3f8ff;
+  cursor: pointer;
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e3f8ff;
+  margin: 0 5px;
+}
+
+/* Search Button */
+.search-button {
+  background: #012b49;
+  border: none;
+  color: #ffffff;
+  width: 45px;
+  height: 45px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: -1px;
+}
+
+.search-button i {
+  font-size: 18px;
+}
+
+/* Right Side Icons */
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: -1px;
+  transform: translateX(-60px);
+}
+
+/* Bell, Heart, Cart, Avatar Icons */
+.bell i,
+.heart i,
+.shopping-cart i,
+.avatar i {
+  font-size: 24px;
+  color: #012b49;
+  cursor: pointer;
+}
+
+/* Hover Effects for Icons */
+.bell i:hover,
+.heart i:hover,
+.shopping-cart i:hover,
+.avatar i:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+/* Notification Dot */
+.bell {
+  position: relative; /* Ensure the notification dot is positioned relative to this container */
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0; /* Align to the top edge of the bell icon */
+  right: 0; /* Align to the right edge of the bell icon */
+  width: 8px;
+  height: 8px;
+  background: #ff0000;
+  border-radius: 50%;
+  transform: translate(-30%, 50%); /* Move the dot halfway outside the bell icon */
+}
+
+/* Cart Count */
+.shopping-cart {
+  position: relative; /* Ensure the cart count is positioned relative to this container */
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px; /* Adjust position to align with the cart icon */
+  right: -5px; /* Adjust position to align with the cart icon */
+  background: #012b49;
+  color: #ffffff;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Frame Section (Inside Header) */
+.frame-wrapper {
+  background-color: #012b49; /* Background color for the frame */
+  padding: 7px 10px; /* Add padding */
+}
+
+.frame-513 {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  gap: 120px; /* Space between items */
+}
+
+.frame-item {
+  color: #ffffff; /* Text color */
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+  /* Adjust header for tablets */
+  .header {
+    padding: 0 10px; /* Reduce padding */
+  }
+
+  .search-bar {
+    width: 60%; /* Reduce width */
+    margin-left: 10px; /* Reduce left margin */
+  }
+
+  .search-input {
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .right-side {
+    gap: 10px; /* Reduce gap between icons */
+    transform: translateX(0); /* Reset transform */
+  }
+
+  .bell i,
+  .heart i,
+  .shopping-cart i,
+  .avatar i {
+    font-size: 20px; /* Reduce icon size */
+  }
+
+  /* Adjust frame for tablets */
+  .frame-513 {
+    gap: 20px; /* Reduce gap for smaller screens */
+    padding: 12px 0;
+  }
+
+  .frame-item {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust header for mobile phones */
+  .header {
+    height: 60px; /* Reduce header height */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width */
+    margin-left: 5px; /* Reduce left margin */
+  }
+
+  .dropdown .dropdown-toggle {
+    padding: 8px; /* Reduce padding */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .search-input {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .qr-icon,
+  .divider {
+    display: none; /* Hide QR code and divider on small screens */
+  }
+
+  .right-side {
+    gap: 5px; /* Further reduce gap between icons */
+  }
+
+  .heart {
+    display: none; /* Hide heart icon on very small screens */
+  }
+
+  .bell i,
+  .shopping-cart i,
+  .avatar i {
+    font-size: 18px; /* Further reduce icon size */
+  }
+
+  /* Adjust frame for mobile phones */
+  .frame-513 {
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 6px;
+    padding: 10px 0;
+    align-items: center; /* Center-align items */
+  }
+
+  .frame-item {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
