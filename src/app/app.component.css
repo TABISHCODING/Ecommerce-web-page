@@ -1,4 +1,23 @@
-/*.parent-container {
-    overflow: visible;  Allow content to overflow 
-    border: 2px solid green; Debugging border 
-    background-color: rgba(0, 255, 0, 0.3);Temporary background color }*/
+.parent-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Add spacing between components */
+app-banner {
+  display: block;
+  margin-top: 120px; /* Space for fixed header */
+}
+
+@media (max-width: 768px) {
+  app-banner {
+    margin-top: 150px; /* More space for wrapped header on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  app-banner {
+    margin-top: 180px;
+  }
+}

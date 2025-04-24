@@ -69,10 +69,11 @@
   align-items: center;
   background: #012b49;
   border-radius: 8px;
-  width: 850px;
+  width: 100%;
+  max-width: 850px;
   height: 45px;
-  margin-left: 65px;
-  flex-wrap: nowrap; /* Prevent items from breaking into new line */
+  margin-left: 20px;
+  flex-wrap: nowrap;
 }
 
 /* Dropdown */
@@ -249,94 +250,47 @@
 }
 
 /* Responsive Styles for Header */
-@media (max-width: 768px) {
-  /* Adjust header for tablets */
-  .header {
-    padding: 0 10px; /* Reduce padding */
-  }
-
+@media (max-width: 992px) {
   .search-bar {
-    width: 60%; /* Reduce width */
-    margin-left: 10px; /* Reduce left margin */
+    max-width: 600px;
   }
+}
 
-  .search-input {
-    font-size: 16px; /* Reduce font size */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
   }
-
+  
+  .search-bar {
+    order: 3;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+  
   .right-side {
-    gap: 10px; /* Reduce gap between icons */
-    transform: translateX(0); /* Reset transform */
+    order: 2;
   }
-
-  .bell i,
-  .heart i,
-  .shopping-cart i,
-  .avatar i {
-    font-size: 20px; /* Reduce icon size */
-  }
-
-  /* Adjust frame for tablets */
-  .frame-513 {
-    gap: 20px; /* Reduce gap for smaller screens */
-    padding: 12px 0;
-  }
-
-  .frame-item {
-    font-size: 16px;
-    padding: 4px 8px;
+  
+  .menu {
+    order: 1;
   }
 }
 
 @media (max-width: 480px) {
-  /* Adjust header for mobile phones */
-  .header {
-    height: 60px; /* Reduce header height */
-  }
-
-  .search-bar {
-    width: 100%; /* Full width */
-    margin-left: 5px; /* Reduce left margin */
-  }
-
-  .dropdown .dropdown-toggle {
-    padding: 8px; /* Reduce padding */
-    font-size: 14px; /* Reduce font size */
-  }
-
   .search-input {
-    font-size: 14px; /* Reduce font size */
+    width: 100%;
   }
-
-  .qr-icon,
-  .divider {
-    display: none; /* Hide QR code and divider on small screens */
+  
+  .dropdown .dropdown-toggle {
+    font-size: 12px;
+    padding: 6px;
   }
-
-  .right-side {
-    gap: 5px; /* Further reduce gap between icons */
-  }
-
-  .heart {
-    display: none; /* Hide heart icon on very small screens */
-  }
-
-  .bell i,
-  .shopping-cart i,
-  .avatar i {
-    font-size: 18px; /* Further reduce icon size */
-  }
-
-  /* Adjust frame for mobile phones */
+  
   .frame-513 {
-    flex-direction: column; /* Stack items vertically on mobile */
-    gap: 6px;
+    overflow-x: auto;
+    justify-content: flex-start;
     padding: 10px 0;
-    align-items: center; /* Center-align items */
-  }
-
-  .frame-item {
-    font-size: 14px;
-    padding: 6px 10px;
   }
 }

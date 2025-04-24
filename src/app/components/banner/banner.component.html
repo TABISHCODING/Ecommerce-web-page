@@ -7,311 +7,191 @@
   <h1></h1>
 </div>
 
-<!-- hisense -->
-<div class="hisense-wrapper">
-  <!-- Big Card -->
-  <div class="hisense-card-big">
-     <!-- <img src="Hisense_Soundbar2.png" alt="Hisense Soundbar">-->
-      <img [src]="hisenseCardBig" alt="Hisense Soundbar">
-      <div class="hisense-overlay">
-          <h2>Hisense Soundbar</h2>
-          <button>Explore More</button>
-      </div>
-  </div>
-
-  <!-- Small Cards (Column) -->
-  <div class="hisense-card-small-container">
-      <div class="hisense-card-small">
-          <img [src]="h2" alt="Hisense TV">
-          <div class="hisense-overlay">
-              <h2>Hisense TV</h2>
-              <button>Explore More</button>
-          </div>
-      </div>
-      <div class="hisense-card-bottom-container">
-          <div class="hisense-card-bottom">
-            <img [src]="h3"  alt="Hisense LED Strips">
-              <div class="hisense-overlay">
-                  <h2>LED Strips</h2>
-              </div>
-          </div>
-          <div class="hisense-card-bottom">
-            <img [src]="h4"  alt="Hisense Remote">
-              <div class="hisense-overlay">
-                  <h2>Remote Control</h2>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<!-- microsoft -->
-
-<div class="microsoft-wrapper">
-  <!-- Big Card -->
-  <div class="microsoft-card-big">
-    <img [src]="ms1" alt="Microsoft Laptop">
-      <div class="microsoft-overlay">
-          <h2>Microsoft Laptop</h2>
-          <button>Explore More</button>
-      </div>
-  </div>
-
-  <!-- Small Cards (Column) -->
-  <div class="microsoft-card-small-container">
-      <div class="microsoft-card-small">
-        <img [src]="ms2" alt="Microsoft Keyboard">
-          <div class="microsoft-overlay">
-              <h2>Microsoft Keyboard</h2>
-              <button>Explore More</button>
-          </div>
-      </div>
-      <div class="microsoft-card-bottom-container">
-          <div class="microsoft-card-bottom">
-            <img [src]="ms3" alt="Microsoft Mouse">
-              <div class="microsoft-overlay">
-                  <h2>Microsoft Mouse</h2>
-              </div>
-          </div>
-          <div class="microsoft-card-bottom">
-            <img [src]="ms4" alt="Microsoft Headset">
-              <div class="microsoft-overlay">
-                  <h2>Microsoft Headset</h2>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-
-<!-- RunMus -->
-<div class="runmus-wrapper">
-  <!-- Big Card -->
-  <div class="runmus-card-big">
-    <img [src]="rm1" alt="RunMus Headphone">
-      <div class="runmus-overlay">
-          <h2>RunMus</h2>
-          <p>LONG-TERM COMFORT GAMING EXPERIENCE</p>
-          <button>View More</button>
-      </div>
-  </div>
-
-  <!-- Small Cards (Column) -->
-  <div class="runmus-card-small-container">
-      <div class="runmus-card-small">
-        <img [src]="rm2"alt="RunMus Headset">
-          <div class="runmus-overlay">
-              <h2>RunMus</h2>
-              <button>View More</button>
-          </div>
-      </div>
-      <div class="runmus-card-bottom-container">
-          <div class="runmus-card-bottom">
-            <img [src]="rm3"   alt="RunMus Green Headset">
-              <div class="runmus-overlay">
-                  <h2>RunMus</h2>
-                  <button>View More</button>
-              </div>
-          </div>
-          <div class="runmus-card-bottom">
-            <img [src]="rm4" alt="RunMus RGB Headset">
-              <div class="runmus-overlay">
-                  <h2>RunMus</h2>
-                  <button>View More</button>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<!-- Lenovo -->
-<div class="lenovo-wrapper">
-  <!-- Big Card -->
-  <div class="lenovo-card-big">
-    <img [src]="le1" alt="Lenovo Desktop">
-      <div class="lenovo-overlay">
-          <h2>Lenovo</h2>
-          <button>View More</button>
-      </div>
-  </div>
-
-  <!-- Small Cards (Column) -->
-  <div class="lenovo-card-small-container">
-      <div class="lenovo-card-small">
-        <img [src]="le2" alt="Lenovo Laptop">
-          <div class="lenovo-overlay">
-              <h2>Lenovo</h2>
-              <button>View More</button>
-          </div>
-      </div>
-      <div class="lenovo-card-bottom-container">
-          <div class="lenovo-card-bottom">
-            <img [src]="le3" alt="Lenovo Tablet">
-              <div class="lenovo-overlay">
-                  <h2>Lenovo</h2>
-                  <button>View More</button>
-              </div>
-          </div>
-          <div class="lenovo-card-bottom">
-            <img [src]="le4" alt="Lenovo Laptop Open">
-              <div class="lenovo-overlay">
-                  <h2>Lenovo</h2>
-                  <button>View More</button>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-<!-- sub title -->
-<div class="subtitle-wrapper">
-  <!-- Left Section -->
-  <div class="subtitle-left">
-    <span class="subtitle-title">Trending Products</span>
-  </div>
-
-  <!-- Center Text -->
-  <div class="subtitle-text">
-    ___Everyday listed new products from our trusted seller___
-  </div>
-
-  <!-- Right Button -->
-  <div class="subtitle-right">
-    <button class="subtitle-btn">Show all products</button>
-  </div>
-</div>
-
-
-
-
-
-
- <!-- trending product -->
- <div class="trending-products-wrapper">
-  <div class="trending-products-container">
-    <div
-      class="product-card"
-      *ngFor="let product of products"
-      (mouseenter)="startScroll($event, '.trending-products-container')"
-      (mouseleave)="stopScroll('.trending-products-container')"
-    >
-      <img [src]="product.image" [alt]="product.name" class="product-image" />
-       <!-- Rating -->
-       <div class="browsing-rating">
-        <span class="rating-badge">
-          ⭐ {{ product.rating }} ({{ product.reviews }} Reviews)
-        </span>
-      </div>
-
-      <div class="product-details">
-        <h5 class="product-name">{{ product.name }}</h5>
-        <p class="product-desc">{{ product.description }}</p>
-        
-
-        <div class="product-price">
-          <span class="old-price">${{ product.oldPrice }}</span>
-          <span class="new-price">${{ product.newPrice }}</span>
-          <span class="discount">{{ product.discount }}% Off</span>
+<!-- Make product sections responsive with container divs -->
+<div class="container-fluid">
+  <!-- hisense -->
+  <div class="hisense-wrapper">
+    <!-- Big Card -->
+    <div class="hisense-card-big">
+       <!-- <img src="Hisense_Soundbar2.png" alt="Hisense Soundbar">-->
+        <img [src]="hisenseCardBig" alt="Hisense Soundbar">
+        <div class="hisense-overlay">
+            <h2>Hisense Soundbar</h2>
+            <button>Explore More</button>
         </div>
+    </div>
 
-        <div class="product-shipping">
-          🚚 Free shipping | <a href="#" class="shop-seller">Shop this seller</a>
+    <!-- Small Cards (Column) -->
+    <div class="hisense-card-small-container">
+        <div class="hisense-card-small">
+            <img [src]="h2" alt="Hisense TV">
+            <div class="hisense-overlay">
+                <h2>Hisense TV</h2>
+                <button>Explore More</button>
+            </div>
         </div>
-
-        <div class="product-actions">
-          <button class="view-btn">View Products</button>
-          <button class="cart-btn"><i class="bi bi-cart"></i></button>
-          <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
+        <div class="hisense-card-bottom-container">
+            <div class="hisense-card-bottom">
+              <img [src]="h3"  alt="Hisense LED Strips">
+                <div class="hisense-overlay">
+                    <h2>LED Strips</h2>
+                </div>
+            </div>
+            <div class="hisense-card-bottom">
+              <img [src]="h4"  alt="Hisense Remote">
+                <div class="hisense-overlay">
+                    <h2>Remote Control</h2>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </div>
-</div>
 
-<!-- sub title 2 -->
-<div class="subtitle2-wrapper">
-  <!-- Left Section -->
-  <div class="subtitle2-left">
-    <span class="subtitle-title">offers on Top Brands</span>
-  </div>
+  <!-- microsoft -->
 
-  <!-- Center Text -->
-  <div class="subtitle2-text">
-    ___Everyday listed new products from our trusted seller___
-  </div>
-
-  <!-- Right Button -->
-  <div class="subtitle2-right">
-    <button class="subtitle2-btn">Show all products</button>
-  </div>
-</div>
-
-
-
-
-<!-- ✅ New Section: Top Brand Offers -->
-<div class="top-brand-wrapper">
-  <div class="top-brand-container">
-    <div
-      class="brand-card"
-      *ngFor="let brand of topBrands"
-      (mouseenter)="startScroll($event, '.top-brand-container')"
-      (mouseleave)="stopScroll('.top-brand-container')"
-    >
-      <img [src]="brand.image" [alt]="brand.name" class="brand-image" />
-
-      <div class="brand-details">
-        <h5 class="brand-name">{{ brand.name }}</h5>
-        <span class="brand-discount">{{ brand.discount }}% Off</span>
-        <div class="brand-footer">
-          <a href="#" class="view-more">View More</a>
-          <span class="count-badge">{{ brand.count }}</span>
+  <div class="microsoft-wrapper">
+    <!-- Big Card -->
+    <div class="microsoft-card-big">
+      <img [src]="ms1" alt="Microsoft Laptop">
+        <div class="microsoft-overlay">
+            <h2>Microsoft Laptop</h2>
+            <button>Explore More</button>
         </div>
-      </div>
+    </div>
+
+    <!-- Small Cards (Column) -->
+    <div class="microsoft-card-small-container">
+        <div class="microsoft-card-small">
+          <img [src]="ms2" alt="Microsoft Keyboard">
+            <div class="microsoft-overlay">
+                <h2>Microsoft Keyboard</h2>
+                <button>Explore More</button>
+            </div>
+        </div>
+        <div class="microsoft-card-bottom-container">
+            <div class="microsoft-card-bottom">
+              <img [src]="ms3" alt="Microsoft Mouse">
+                <div class="microsoft-overlay">
+                    <h2>Microsoft Mouse</h2>
+                </div>
+            </div>
+            <div class="microsoft-card-bottom">
+              <img [src]="ms4" alt="Microsoft Headset">
+                <div class="microsoft-overlay">
+                    <h2>Microsoft Headset</h2>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
-</div>
 
+  <!-- RunMus -->
+  <div class="runmus-wrapper">
+    <!-- Big Card -->
+    <div class="runmus-card-big">
+      <img [src]="rm1" alt="RunMus Headphone">
+        <div class="runmus-overlay">
+            <h2>RunMus</h2>
+            <p>LONG-TERM COMFORT GAMING EXPERIENCE</p>
+            <button>View More</button>
+        </div>
+    </div>
 
-<!-- sub title 3 -->
-<div class="subtitle3-wrapper">
-  <!-- Left Section -->
-  <div class="subtitle3-left">
-    <span class="subtitle-title">Best Selling items</span>
+    <!-- Small Cards (Column) -->
+    <div class="runmus-card-small-container">
+        <div class="runmus-card-small">
+          <img [src]="rm2"alt="RunMus Headset">
+            <div class="runmus-overlay">
+                <h2>RunMus</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="runmus-card-bottom-container">
+            <div class="runmus-card-bottom">
+              <img [src]="rm3"   alt="RunMus Green Headset">
+                <div class="runmus-overlay">
+                    <h2>RunMus</h2>
+                    <button>View More</button>
+                </div>
+            </div>
+            <div class="runmus-card-bottom">
+              <img [src]="rm4" alt="RunMus RGB Headset">
+                <div class="runmus-overlay">
+                    <h2>RunMus</h2>
+                    <button>View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 
-  <!-- Center Text -->
-  <div class="subtitle3-text">
-    ___Everyday listed new products from our trusted seller___
+  <!-- Lenovo -->
+  <div class="lenovo-wrapper">
+    <!-- Big Card -->
+    <div class="lenovo-card-big">
+      <img [src]="le1" alt="Lenovo Desktop">
+        <div class="lenovo-overlay">
+            <h2>Lenovo</h2>
+            <button>View More</button>
+        </div>
+    </div>
+
+    <!-- Small Cards (Column) -->
+    <div class="lenovo-card-small-container">
+        <div class="lenovo-card-small">
+          <img [src]="le2" alt="Lenovo Laptop">
+            <div class="lenovo-overlay">
+                <h2>Lenovo</h2>
+                <button>View More</button>
+            </div>
+        </div>
+        <div class="lenovo-card-bottom-container">
+            <div class="lenovo-card-bottom">
+              <img [src]="le3" alt="Lenovo Tablet">
+                <div class="lenovo-overlay">
+                    <h2>Lenovo</h2>
+                    <button>View More</button>
+                </div>
+            </div>
+            <div class="lenovo-card-bottom">
+              <img [src]="le4" alt="Lenovo Laptop Open">
+                <div class="lenovo-overlay">
+                    <h2>Lenovo</h2>
+                    <button>View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 
-  <!-- Right Button -->
-  <div class="subtitle3-right">
-    <button class="subtitle3-btn">Show all products</button>
+  <!-- sub title -->
+  <div class="subtitle-wrapper">
+    <!-- Left Section -->
+    <div class="subtitle-left">
+      <span class="subtitle-title">Trending Products</span>
+    </div>
+
+    <!-- Center Text -->
+    <div class="subtitle-text">
+      ___Everyday listed new products from our trusted seller___
+    </div>
+
+    <!-- Right Button -->
+    <div class="subtitle-right">
+      <button class="subtitle-btn">Show all products</button>
+    </div>
   </div>
-</div>
 
-
-
-<!-- Best Selling Products -->
-<!-- Best Selling Products -->
-<div class="best-products-wrapper">
-  <div class="best-products-container">
-    <div
-      class="best-product-card"
-      *ngFor="let product of bestProducts"
-      (mouseenter)="startScroll($event, '.best-products-container')"
-      (mouseleave)="stopScroll('.best-products-container')"
-    >
-      <img [src]="product.image" [alt]="product.name" class="best-product-image" />
-
-      <div class="best-product-details">
-        <h5 class="best-product-name">{{ product.name }}</h5>
-        <p class="best-product-desc">{{ product.description }}</p>
+  <!-- trending product -->
+  <div class="trending-products-wrapper">
+    <div class="trending-products-container">
+      <div
+        class="product-card"
+        *ngFor="let product of products"
+        (mouseenter)="startScroll($event, '.trending-products-container')"
+        (mouseleave)="stopScroll('.trending-products-container')"
+      >
+        <img [src]="product.image" [alt]="product.name" class="product-image" />
          <!-- Rating -->
          <div class="browsing-rating">
           <span class="rating-badge">
@@ -319,111 +199,216 @@
           </span>
         </div>
 
-        <div class="best-product-price">
-          <span *ngIf="product.oldPrice" class="best-old-price">
-            ${{ product.oldPrice }}
-          </span>
-          <span class="best-new-price">${{ product.newPrice }}</span>
-          <span class="best-discount" *ngIf="product.discount">
-            {{ product.discount }}% Off
-          </span>
-        </div>
+        <div class="product-details">
+          <h5 class="product-name">{{ product.name }}</h5>
+          <p class="product-desc">{{ product.description }}</p>
+          
 
-        <div class="best-product-shipping">
-          🚚 Free shipping |
-          <a href="#" class="best-shop-seller">Shop this seller</a>
-        </div>
+          <div class="product-price">
+            <span class="old-price">${{ product.oldPrice }}</span>
+            <span class="new-price">${{ product.newPrice }}</span>
+            <span class="discount">{{ product.discount }}% Off</span>
+          </div>
 
-        <div class="best-product-actions">
-          <button class="best-view-btn">View Products</button>
-          <button class="best-cart-btn">
-            <i class="bi bi-cart"></i>
-          </button>
-          <button class="best-wishlist-btn">
-            <i class="bi bi-heart"></i>
-          </button>
+          <div class="product-shipping">
+            🚚 Free shipping | <a href="#" class="shop-seller">Shop this seller</a>
+          </div>
+
+          <div class="product-actions">
+            <button class="view-btn">View Products</button>
+            <button class="cart-btn"><i class="bi bi-cart"></i></button>
+            <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
+  <!-- sub title 2 -->
+  <div class="subtitle2-wrapper">
+    <!-- Left Section -->
+    <div class="subtitle2-left">
+      <span class="subtitle-title">offers on Top Brands</span>
+    </div>
 
-<!-- sub title 4 -->
-<div class="subtitle4-wrapper">
-  <!-- Left Section -->
-  <div class="subtitle4-left">
-    <span class="subtitle-title">Browsing history</span>
+    <!-- Center Text -->
+    <div class="subtitle2-text">
+      ___Everyday listed new products from our trusted seller___
+    </div>
+
+    <!-- Right Button -->
+    <div class="subtitle2-right">
+      <button class="subtitle2-btn">Show all products</button>
+    </div>
   </div>
 
-  <!-- Center Text -->
-  <div class="subtitle4-text">
-    ___Everyday listed new products from our trusted seller___
+  <!-- ✅ New Section: Top Brand Offers -->
+  <div class="top-brand-wrapper">
+    <div class="top-brand-container">
+      <div
+        class="brand-card"
+        *ngFor="let brand of topBrands"
+        (mouseenter)="startScroll($event, '.top-brand-container')"
+        (mouseleave)="stopScroll('.top-brand-container')"
+      >
+        <img [src]="brand.image" [alt]="brand.name" class="brand-image" />
+
+        <div class="brand-details">
+          <h5 class="brand-name">{{ brand.name }}</h5>
+          <span class="brand-discount">{{ brand.discount }}% Off</span>
+          <div class="brand-footer">
+            <a href="#" class="view-more">View More</a>
+            <span class="count-badge">{{ brand.count }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Right Button -->
-  <div class="subtitle4-right">
-    <button class="subtitle4-btn">Show all products</button>
+  <!-- sub title 3 -->
+  <div class="subtitle3-wrapper">
+    <!-- Left Section -->
+    <div class="subtitle3-left">
+      <span class="subtitle-title">Best Selling items</span>
+    </div>
+
+    <!-- Center Text -->
+    <div class="subtitle3-text">
+      ___Everyday listed new products from our trusted seller___
+    </div>
+
+    <!-- Right Button -->
+    <div class="subtitle3-right">
+      <button class="subtitle3-btn">Show all products</button>
+    </div>
   </div>
-</div>
 
+  <!-- Best Selling Products -->
+  <!-- Best Selling Products -->
+  <div class="best-products-wrapper">
+    <div class="best-products-container">
+      <div
+        class="best-product-card"
+        *ngFor="let product of bestProducts"
+        (mouseenter)="startScroll($event, '.best-products-container')"
+        (mouseleave)="stopScroll('.best-products-container')"
+      >
+        <img [src]="product.image" [alt]="product.name" class="best-product-image" />
 
-<!-- browsing history-->
-<div class="browsing-history-wrapper">
-  <div class="browsing-history-container">
-    <div
-      class="browsing-card"
-      *ngFor="let product of browsingHistory"
-      (mouseenter)="startScroll($event, '.browsing-history-container')"
-      (mouseleave)="stopScroll('.browsing-history-container')"
-    >
-      <!-- Product Image -->
-      <img
-        [src]="product.image"
-        [alt]="product.name"
-        class="browsing-image"
-      />
+        <div class="best-product-details">
+          <h5 class="best-product-name">{{ product.name }}</h5>
+          <p class="best-product-desc">{{ product.description }}</p>
+           <!-- Rating -->
+           <div class="browsing-rating">
+            <span class="rating-badge">
+              ⭐ {{ product.rating }} ({{ product.reviews }} Reviews)
+            </span>
+          </div>
 
-      <div class="browsing-details">
-        <!-- Product Name -->
-        <h5 class="browsing-name">{{ product.name }}</h5>
-        
-        <!-- Product Description -->
-        <p class="browsing-desc">{{ product.description }}</p>
+          <div class="best-product-price">
+            <span *ngIf="product.oldPrice" class="best-old-price">
+              ${{ product.oldPrice }}
+            </span>
+            <span class="best-new-price">${{ product.newPrice }}</span>
+            <span class="best-discount" *ngIf="product.discount">
+              {{ product.discount }}% Off
+            </span>
+          </div>
 
-        <!-- Rating -->
-        <div class="browsing-rating">
-          <span class="rating-badge">
-            ⭐ {{ product.rating }} ({{ product.reviews }} Reviews)
-          </span>
+          <div class="best-product-shipping">
+            🚚 Free shipping |
+            <a href="#" class="best-shop-seller">Shop this seller</a>
+          </div>
+
+          <div class="best-product-actions">
+            <button class="best-view-btn">View Products</button>
+            <button class="best-cart-btn">
+              <i class="bi bi-cart"></i>
+            </button>
+            <button class="best-wishlist-btn">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- Price and Discount -->
-        <div class="browsing-price">
-          <span *ngIf="product.oldPrice" class="old-price">
-            ${{ product.oldPrice }}
-          </span>
-          <span class="new-price">${{ product.newPrice }}</span>
-          <span class="discount" *ngIf="product.discount">
-            {{ product.discount }}% Off
-          </span>
-        </div>
+  <!-- sub title 4 -->
+  <div class="subtitle4-wrapper">
+    <!-- Left Section -->
+    <div class="subtitle4-left">
+      <span class="subtitle-title">Browsing history</span>
+    </div>
 
-        <!-- Shipping Info -->
-        <div class="browsing-shipping">
-          🚚 Free shipping |
-          <a href="#" class="shop-seller">Shop this seller</a>
-        </div>
+    <!-- Center Text -->
+    <div class="subtitle4-text">
+      ___Everyday listed new products from our trusted seller___
+    </div>
 
-        <!-- Action Buttons -->
-        <div class="browsing-actions">
-          <button class="view-btn">View Products</button>
-          <button class="cart-btn">
-            <i class="bi bi-cart"></i>
-          </button>
-          <button class="wishlist-btn">
-            <i class="bi bi-heart"></i>
-          </button>
+    <!-- Right Button -->
+    <div class="subtitle4-right">
+      <button class="subtitle4-btn">Show all products</button>
+    </div>
+  </div>
+
+  <!-- browsing history-->
+  <div class="browsing-history-wrapper">
+    <div class="browsing-history-container">
+      <div
+        class="browsing-card"
+        *ngFor="let product of browsingHistory"
+        (mouseenter)="startScroll($event, '.browsing-history-container')"
+        (mouseleave)="stopScroll('.browsing-history-container')"
+      >
+        <!-- Product Image -->
+        <img
+          [src]="product.image"
+          [alt]="product.name"
+          class="browsing-image"
+        />
+
+        <div class="browsing-details">
+          <!-- Product Name -->
+          <h5 class="browsing-name">{{ product.name }}</h5>
+          
+          <!-- Product Description -->
+          <p class="browsing-desc">{{ product.description }}</p>
+
+          <!-- Rating -->
+          <div class="browsing-rating">
+            <span class="rating-badge">
+              ⭐ {{ product.rating }} ({{ product.reviews }} Reviews)
+            </span>
+          </div>
+
+          <!-- Price and Discount -->
+          <div class="browsing-price">
+            <span *ngIf="product.oldPrice" class="old-price">
+              ${{ product.oldPrice }}
+            </span>
+            <span class="new-price">${{ product.newPrice }}</span>
+            <span class="discount" *ngIf="product.discount">
+              {{ product.discount }}% Off
+            </span>
+          </div>
+
+          <!-- Shipping Info -->
+          <div class="browsing-shipping">
+            🚚 Free shipping |
+            <a href="#" class="shop-seller">Shop this seller</a>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="browsing-actions">
+            <button class="view-btn">View Products</button>
+            <button class="cart-btn">
+              <i class="bi bi-cart"></i>
+            </button>
+            <button class="wishlist-btn">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

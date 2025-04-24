@@ -1,5 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Global responsive rules */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive font sizes */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Ensure viewport meta tag is properly set in index.html */
+
     /* Apply to the entire webpage */
 
     body {
